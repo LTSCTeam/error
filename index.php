@@ -1,0 +1,39 @@
+<?php
+$source = $_GET['source'];
+
+if ($source == 'bio') {
+    $name = "Tokyani BIO";
+    $link = "https://tokyani.space/";
+} else {
+    $name = null;
+    $link = "https://tokyani.space";
+}
+?>
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Not-Allowed</title>
+    <link href="assets/css/index.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="container px-4 overflow-hidden">
+    <div class="card m-5">
+        <div class="alert alert-danger text-center m-5 h3" role="alert">
+            403 Forbidden
+        </div>
+        <div class="card-body text-center">
+            <h3 class="card-title"><?php echo $name; ?></h3>
+            <div class="card-text">Вы хотели просмотреть код элемента на сайте <b><?php echo $name; ?></b></div>
+            <a href="<?php echo $link; ?>" class="btn btn-success m-5">Вернуться на сайт</a>
+        </div>
+    </div>
+</div>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</body>
+</html>
